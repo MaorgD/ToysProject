@@ -1,7 +1,11 @@
 main .top {
-    min-height: 150px;
-    border-radius: 32px;
-    background-image: url(pexels-karen-pamplona-4341964.jpg);
-    font-family: "Pattaya", sans-serif;
-    box-shadow: 0px 10px 22px 0px #000000;
-  }
+  min-height: 200px;
+  border-radius: 32px;
+  background-image: url(pexels-jonny-lew-1547836.jpg);
+  font-family: "Pattaya", sans-serif;
+  box-shadow: 0px 10px 22px 0px #000000;
+  background-position: top;
+  background-size: cover;
+
+
+}
