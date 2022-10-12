@@ -11,6 +11,13 @@ router.get("/myInfo",auth,userCtrl.myInfo)
 router.get("/usersList", authAdmin ,userCtrl.userList)
 
 router.post("/",authCtrl.signUp)
+
 router.post("/login", authCtrl.login)
+
+router.delete("/:idDel", auth ,userCtrl.deleteAccount);
+
+router.put("/:idEdit",auth,userCtrl.editUser);
+
+
 
 module.exports = router;
