@@ -2,7 +2,7 @@ const{ToyModel} = require("../models/toyModel");
 const { validateToy } = require("../validation/toyValidation");
 
 exports.toyCtrl={
-    searchToy:async(req,res) => {
+      searchToy:async(req,res) => {
       let perPage = req.query.perPage || 10;
       let page = req.query.page || 1;
     
