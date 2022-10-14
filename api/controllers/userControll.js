@@ -25,17 +25,7 @@ exports.userCtrl={
       }
     ,deleteAccount : async(req,res) =>{
         try {
-            let data;
-            let idDel = req.params.idDel;
-            if(req.tokenData.role === "admin"){
-                data = await UserModel.deleteOne({ _id: idDel});
-            }
-            else if(idDel === req.tokenData._id){
-                data = await UserModel.deleteOne({ _id: idDel});
-            }
-            if (!data) {
-                return res.status(400).json({ err: "cannot delete user" })
-            }
+            let data = await UserModel.deleteOne({ _id: idDel});
             res.json(200).json(data);
         }
         catch (err) {
@@ -45,20 +35,7 @@ exports.userCtrl={
       }
     ,editUser : async(req,res) =>{
       try {
-          let idEdit = req.params.idEdit;
-          let data;
-          if (req.tokenData.role === "admin") {
-              data = await UserModel.updateOne({ _id: idEdit },req.body);
-          }
-          else if(idEdit === req.tokenData._id){
-              data = await UserModel.updateOne({ _id: idEdit},req.body);
-          }
-          if (!data) {
-              return res.status(400).json({ err: "cannot edit user" })
-          }
-          let user = await UserModel.findOne({_id:idEdit});
-          user.password = await bcrypt.hash(user.password, 10);
-          await user.save()
+          let data = await UserModel.updateOne({ _id: idEdit },req.body);
           res.json(data);
       }
       catch (err) {
