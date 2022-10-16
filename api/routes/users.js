@@ -16,7 +16,7 @@ router.post("/login", authCtrl.login)
 
 router.put("/:idEdit",auth,userCtrl.editUser);
 
-router.delete("/:idDel", authAdmin ,userCtrl.deleteAccount);
+router.delete("/:idDel" ,auth, userCtrl.deleteAccount);
 
 
 

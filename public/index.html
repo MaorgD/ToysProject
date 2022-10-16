@@ -51,8 +51,16 @@
         <!-- table 1 -->
         <div class="container">
             <div class="p-2">
-                <div class="shadow d-flex align-items-center justify-content-center p-3 top">
-                    <h2>domain - https://api-toys.cyclic.app </h2>
+                <div class="shadow d-flex align-text-top justify-content-center p-3 top text-white ">
+                    <h2>
+                    <span class="text-info fw-bolder">D</span>
+                    <span class="text-dark">o</span>
+                    <span class="text-warning fw-bolder">m</span>
+                    <span class="text-dark">a</span>
+                    <span class="text-info fw-bolder">i</span>
+                    <span class="text-dark">n -</span>
+
+                        https://api-toys.cyclic.app </h2>
 
                 </div>
             </div>
@@ -92,15 +100,15 @@
                 <tbody>
                     <tr>
                         <td>GET</td>
-                        <td><a href="/users/usersList">/users/usersList</a></td>
-                        <td></td>
-                        <td>Get list of all users - by token admin</td>
-                    </tr>
-                    <tr>
-                        <td>GET</td>
                         <td><a href="/users/myInfo">/users/myInfo</a></td>
                         <td></td>
                         <td>Get your own info - by token</td>
+                    </tr>
+                    <tr>
+                        <td>GET</td>
+                        <td><a href="/users/usersList">/users/usersList</a></td>
+                        <td></td>
+                        <td>Get list of all users - by token admin</td>
                     </tr>
                     <tr>
                         <td>POST</td>
@@ -133,7 +141,7 @@
                         <td>DELETE</td>
                         <td>/users/{idDel}</td>
                         <td></td>
-                        <td>Delete a user from the data base. <strong> admin token can delete every user , and user can
+                        <td>Delete a user from the data base. <strong> Admin token can delete every user , and user can
                                 delete only himself</strong>
                         </td>
                     </tr>

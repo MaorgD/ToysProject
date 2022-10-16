@@ -39,7 +39,7 @@ exports.userCtrl = {
         data = await UserModel.updateOne({ _id: idEdit }, req.body)
       }
       if (!data) {
-        return res.status(400).json({ err: "cannot delete !" })
+        return res.status(400).json({ err: "This operation is not enabled !" })
       }
       let user = await UserModel.findOne({ _id: idEdit });
       user.password = await bcrypt.hash(user.password, 10);
