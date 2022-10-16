@@ -51,7 +51,10 @@
         <!-- table 1 -->
         <div class="container">
             <div class="p-2">
-                <div class="shadow d-flex align-items-center justify-content-center p-3 top text-white"></div>
+                <div class="shadow d-flex align-items-center justify-content-center p-3 top">
+                    <h2>domain - https://api-toys.cyclic.app </h2>
+
+                </div>
             </div>
             <div id="user_id" class="text-center m-3">
                 <h2 class="display-4 text-center py-2">
@@ -77,13 +80,9 @@
         <div class="container table-responsive shadow p-2 ">
             <table class="table table-bordered table-striped ">
                 <thead>
+
                     <tr>
-                        <th class="text-center" colspan="4">
-                            domain - https://toys-api-ypyq.onrender.com/
-                        </th>
-                    </tr>
-                    <tr>
-                      
+
                         <th class="text-center" scope="col">Method</th>
                         <th class="text-center" scope="col">URL</th>
                         <th class="text-center" scope="col">Body</th>
@@ -93,13 +92,13 @@
                 <tbody>
                     <tr>
                         <td>GET</td>
-                        <td><a href="/users/usersList">/users</a></td>
+                        <td><a href="/users/usersList">/users/usersList</a></td>
                         <td></td>
-                        <td>Get list of all users  - by token admin</td>
+                        <td>Get list of all users - by token admin</td>
                     </tr>
                     <tr>
                         <td>GET</td>
-                        <td><a href="/users/myInfo">/users</a></td>
+                        <td><a href="/users/myInfo">/users/myInfo</a></td>
                         <td></td>
                         <td>Get your own info - by token</td>
                     </tr>
@@ -118,7 +117,7 @@
                     </tr>
                     <tr>
                         <td>POST (login)</td>
-                        <td>/users</td>
+                        <td>/users/login</td>
                         <td>
                             <pre>
 {
@@ -132,37 +131,28 @@
 
                     <tr>
                         <td>DELETE</td>
-                        <td>/ID</td>
+                        <td>users/{idDel}</td>
                         <td></td>
-                        <td>Delete a user from the data base, <strong>You need a admin token for this query</strong></td>
+                        <td>Delete a user from the data base. <strong> admin token can delete every user , and user can
+                                delete only himself</strong>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>PUT</td>
-                        <td>/users/editUser/ID </td>
+                        <td>/users/{idEdit}</td>
                         <td>
                             <pre>
-                                "name": "Maor Dvora",
-                                "email": "MaorGabay@gabay.com",
-                                "password": "Maor31kd3Fg8"
+"name": "Maor Dvora",
+"email": "MaorGabay@gabay.com",
+"password": "Maor31kd3Fg8"
                              </pre>
                         </td>
-                        <td>Update your user in the data base,<strong>You need a token for this query</strong></td>
+                        <td>Update your user in the data base,<strong> Admin token can edit every user data , and user can
+                            edit only himself</strong>
+                    </td>
                     </tr>
 
-                    <tr>
-                        <td>PUT</td>
-                        <td>/users/editManger/ID </td>
-                        <td>
-                            <pre>
-                                "name": "Maor Dvora",
-                                "email": "MaorGabay@gabay.com",
-                                "password": "Maor31kd3Fg8"
-                             </pre>
-                        </td>
-                        <td>Update a user in the data base,<strong>You need a  admin token for this query</strong></td>
-                    </tr>
-   
                 </tbody>
             </table>
         </div>
@@ -193,12 +183,7 @@
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th class="text-center" colspan="4">
-                            domain - https://toys-api-ypyq.onrender.com/
-                        </th>
-                    </tr>
-                    <tr>
-                    
+
                         <th class="text-center" scope="col">Method</th>
                         <th class="text-center" scope="col">URL</th>
                         <th class="text-center" scope="col">Body</th>
@@ -294,7 +279,7 @@
                 </a></li>
             <li class="ms-3"><a class="text-muted" href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i>
                 </a></li>
-            <li class="ms-3"><a class="text-muted" href="https://github.com/"><i class="bi bi-github"></i>
+            <li class="ms-3"><a class="text-muted" href="https://github.com/MaorgD/ToysProject "><i class="bi bi-github"></i>
                 </a></li>
         </ul>
     </footer>

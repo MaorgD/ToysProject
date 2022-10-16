@@ -1,5 +1,6 @@
 const { UserModel } = require("../models/userModel");
 const bcrypt = require("bcrypt");
+const {validUser} = require("../validation/userValidation")
 
 exports.userCtrl = {
   myInfo: async (req, res) => {
@@ -23,7 +24,11 @@ exports.userCtrl = {
       res.status(500).json({ msg: "err", err })
     }
   },
-  editManger: async (req, res) => {
+  editUser: async (req, res) => {
+    let validBody = validUser(req.body);
+    if (validBody.error) {
+      return res.status(400).json(validBody.error.details);
+    }
     try {
       let idEdit = req.params.idEdit;
       let data;
@@ -43,27 +48,6 @@ exports.userCtrl = {
     }
     catch (err) {
       console.log(err);
-      res.status(400).json({ err })
-    }
-  },
-  editUser: async (req, res) => {
-    try {
-      let idEdit = req.params.idEdit;
-      let data;
-      if (req.tokenData.role === "admin") {
-        data = await UserModel.updateOne({ _id: idEdit }, req.body);
-      }
-      else {
-        data = await UserModel.updateOne({ _id: idEdit, _id: req.tokenData._id }, req.body);
-      }
-      let user = await UserModel.findOne({ _id: idEdit });
-      user.password = await bcrypt.hash(user.password, 10);
-      user.email = user.email.toLowerCase();
-      await user.save()
-      res.status(200).json({ msg: data })
-    }
-    catch (err) {
-      console.log(err)
       res.status(400).json({ err })
     }
   },
