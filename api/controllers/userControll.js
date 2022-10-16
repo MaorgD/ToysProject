@@ -1,5 +1,5 @@
 const { UserModel } = require("../models/userModel");
-
+const bcrypt = require("bcrypt");
 
 exports.userCtrl = {
   myInfo: async (req, res) => {
