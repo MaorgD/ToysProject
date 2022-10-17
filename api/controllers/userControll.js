@@ -61,12 +61,8 @@ exports.userCtrl = {
       else if (idDel === req.tokenData._id) {
         data = await UserModel.deleteOne({ _id: idDel });
       }
-      //delete toys of that user
-      if (!data) {
-        return res.status(400).json({ err: "cannot delete user" })
-      }
       // await ToyModel.deleteMany({ user_id: idDel });
-      res.json(200).json({ msg: data + "user deleted" });
+      res.json(data);
     }
     catch (err) {
       console.log(err);
