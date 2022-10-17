@@ -6,7 +6,7 @@ exports.validateToy = (_reqBody) =>{
         name: Joi.string().min(2).max(99).required(),
         info: Joi.string().min(3).max(100).required(),
         category: Joi.string().min(3).max(15).required(),
-        img: Joi.string().min(2).max(500).allow(null,""),
+        img_url: Joi.string().allow(null, "").max(500),
         price: Joi.number().min(1).max(9999).required()
     })
     return schemaJoi.validate(_reqBody);
