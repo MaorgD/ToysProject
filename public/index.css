@@ -4,10 +4,10 @@ main{
 main .topPic {
   min-height: 300px;
   border-radius: 32px;
-  background-image: url(pexels-jonny-lew-1547836.jpg);
+  background-image: url(pexels-tim-mossholder-3643925.jpg);
   font-family: "Pattaya", sans-serif;
   box-shadow: 0px 10px 22px 0px #000000;
-  background-position: top;
+  background-position: center;
   background-size: cover;
 }
 
