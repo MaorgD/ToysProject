@@ -1,4 +1,7 @@
-main .top {
+main{
+  background-color: rgba(245, 245, 220, 0.678);
+}
+main .topPic {
   min-height: 300px;
   border-radius: 32px;
   background-image: url(pexels-jonny-lew-1547836.jpg);
@@ -7,6 +10,13 @@ main .top {
   background-position: top;
   background-size: cover;
 }
+
+  .bigDomain{
+    font-size: 1.8em;
+    font-family: "Pattaya", sans-serif;
+
+  }
+
 
 nav .myScale{
   display: inline-block;
@@ -25,7 +35,9 @@ nav .myScale:hover{
 }
 
 .text1{
-  font-family: sans-serif;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3em;
 }
 
 .copyBtn{
