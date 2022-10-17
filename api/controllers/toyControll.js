@@ -63,6 +63,12 @@ exports.toyCtrl={
             .skip((page - 1)*perPage)
             .sort({[sort]:reverse})
             res.json(data);
+          }else{
+            let data = await ToyModel.find({})
+            .limit(perPage)
+            .skip((page - 1)*perPage)
+            .sort({[sort]:reverse})
+            res.json(data);
           }
         }
         catch(err){

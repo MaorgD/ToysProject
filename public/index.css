@@ -1,10 +1,10 @@
 main .top {
   min-height: 300px;
   border-radius: 32px;
-  background-image: url(pexels-ahmed-11665644.jpg);
+  background-image: url(pexels-jonny-lew-1547836.jpg);
   font-family: "Pattaya", sans-serif;
   box-shadow: 0px 10px 22px 0px #000000;
-  background-position: center;
+  background-position: top;
   background-size: cover;
 }
 
@@ -22,4 +22,17 @@ nav .myScale:hover{
   transform: scale(1.2);
   letter-spacing: 2px;
   color: black;
+}
+
+.text1{
+  font-family: sans-serif;
+}
+
+.copyBtn{
+  transition: 1000ms;
+}
+
+.copyBtn:hover{
+  transform: scale(1.2);
+  color: blue;
 }
