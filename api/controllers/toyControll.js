@@ -5,7 +5,6 @@ exports.toyCtrl={
       searchToy:async(req,res) => {
       let perPage = req.query.perPage || 10;
       let page = req.query.page || 1;
-    
         try{
           let queryS = req.query.s;
           let searchReg = new RegExp(queryS,"i")
@@ -24,7 +23,6 @@ exports.toyCtrl={
       getToy:async(req,res)=> {
         let perPage = req.query.perPage || 10;
         let page = req.query.page || 1;
-      
         try{
           let data = await ToyModel.find({})
           .limit(perPage)
@@ -42,7 +40,6 @@ exports.toyCtrl={
         let page = req.query.page || 1;
         let sort = req.query.sort || "price"
         let reverse = req.query.reverse == "yes" ? -1 : 1;
-      
         try{
           let minP = req.query.min;
           let maxP = req.query.max;
@@ -56,14 +53,12 @@ exports.toyCtrl={
           }
           else if(maxP){
             let data = await ToyModel.find({price:{$lte:maxP}})
-            
             .limit(perPage)
             .skip((page - 1)*perPage)
             .sort({[sort]:reverse})
             res.json(data);
           }else if(minP){
             let data = await ToyModel.find({price:{$gte:minP}})
-            
             .limit(perPage)
             .skip((page - 1)*perPage)
             .sort({[sort]:reverse})
@@ -78,7 +73,6 @@ exports.toyCtrl={
       toyByCategory:async(req,res) => {
         let perPage = req.query.perPage || 10;
         let page = req.query.page || 1;
-      
           try{
             let catN = req.params.catName;
             let catReg = new RegExp(catN,"i")

@@ -24,7 +24,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-light mb-5 shadow">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">TOYS PRO</a>
+                <a class="navbar-brand myScale" href="#">TOYS PRO</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -33,10 +33,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#user_id">Users</a>
+                            <a class="nav-link active myScale" aria-current="page" href="#user_id">Users</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#toy_id">Toys</a>
+                            <a class="nav-link active myScale" href="#toy_id">Toys</a>
                         </li>
                     </ul>
                 </div>
@@ -101,13 +101,13 @@
                     <tr>
                         <td>GET</td>
                         <td><a href="/users/myInfo">/users/myInfo</a></td>
-                        <td></td>
+                        <td class="text-center">none</td>
                         <td>Get your own info - by token</td>
                     </tr>
                     <tr>
                         <td>GET</td>
                         <td><a href="/users/usersList">/users/usersList</a></td>
-                        <td></td>
+                        <td class="text-center">none</td>
                         <td>Get list of all users - by token admin</td>
                     </tr>
                     <tr>
@@ -203,13 +203,13 @@
                     <tr>
                         <td>GET</td>
                         <td><a href="https://api-toys.cyclic.app//toys">/toys</a></td>
-                        <td></td>
+                        <td class="text-center">none</td>
                         <td>Get a list of all the toys, will present 10 results per page</td>
                     </tr>
                     <tr>
                         <td>GET</td>
                         <td><a href="https://api-toys.cyclic.app/toys/search?s=doll">/toys/search?s=doll</a></td>
-                        <td></td>
+                        <td class="text-center">none</td>
                         <td>search for a toy by searching follwing name or info after the "s=", it will present 10
                             results per page
                         </td>
@@ -219,13 +219,13 @@
                         <td><a
                                 href="https://api-toys.cyclic.app/toys/prices?min=50&max=200">/toys/prices?min=50&max=200</a>
                         </td>
-                        <td></td>
+                        <td class="text-center">none</td>
                         <td>Get a list of the toys by min & max , it will present 10 results per page</td>
                     </tr>
                     <tr>
                         <td>GET</td>
                         <td><a href="https://api-toys.cyclic.app/toys/category/doll">/toys/category/:catName</a></td>
-                        <td></td>
+                        <td class="text-center">none</td>
                         <td>Get a list of all the toys in toys <strong>category</strong>, it will present 10 results per
                             page</td>
                     </tr>
@@ -267,7 +267,7 @@
                     <tr>
                         <td>DELETE</td>
                         <td>/toys/ID</td>
-                        <td></td>
+                        <td class="text-center">none</td>
                         <td>Delete a toy from the data base, <strong>You need a token for this query</strong></td>
                     </tr>
                 </tbody>

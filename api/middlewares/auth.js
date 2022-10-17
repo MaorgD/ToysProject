@@ -11,7 +11,6 @@ exports.auth = (req,res,next) => {
     // add to req , so the next function will recognize
     // the tokenData/decodeToken
     req.tokenData = decodeToken;
-
     next();
   }
   catch(err){
@@ -19,7 +18,6 @@ exports.auth = (req,res,next) => {
     return res.status(401).json({msg:"Token invalid or expired, log in again"})
   }
 }
-
 exports.authAdmin = (req,res,next) => {
   let token = req.header("x-api-key");
   if(!token){
